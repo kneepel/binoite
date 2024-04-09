@@ -16,10 +16,10 @@ modules:
                   # put configuration files you want in /etc/ on a booted system 
                   # in /usr/etc/ in the image. read more in files module reference.
                   
-  - type: containerfile
-    snippets:
-      - RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-39.noarch.rpm #rpm-fusion for prior version
-      - RUN rpm-ostree install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-nonfree-release-39.noarch.rpm 
+  - type: rpm-ostree
+    install:
+        - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-39.noarch.rpm #rpm-fusion for prior version
+        - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-nonfree-release-39.noarch.rpm 
 
   - type: rpm-ostree
     repos:
