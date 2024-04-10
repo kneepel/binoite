@@ -18,8 +18,8 @@ modules:
                   
   - type: rpm-ostree
     install:
-        - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm #rpm-fusion for prior version
-        - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-%OS_VERSION%.noarch.rpm 
+        - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-${image-version}.noarch.rpm #rpm-fusion for prior version
+        - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-${image-version}.noarch.rpm 
 
   - type: rpm-ostree
     repos:
