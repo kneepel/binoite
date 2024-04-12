@@ -17,7 +17,8 @@ modules:
                   # in /usr/etc/ in the image. read more in files module reference.
   - type: script
     scripts:
-      - rpmfusion.sh             
+      - rpmfusion.sh
+      - rpmfiles.sh             
   
   - type: rpm-ostree
     repos:
@@ -26,7 +27,6 @@ modules:
         - neovim
         - steam-devices
         - kvantum
-        - https://github.com/ilya-zlobintsev/LACT/releases/download/v0.5.3/lact-0.5.3-0.x86_64.fedora-39.rpm
     remove:
       # example: removing firefox (in favor of the flatpak)
       # "firefox" is the main package, "firefox-langpacks" is a dependency
